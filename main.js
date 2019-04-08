@@ -122,7 +122,10 @@ module.exports = {
             win.loadURL(`file://${Path.join(__dirname, 'pages')}/configure.html`);
         },
         'editor:build-finished': function(event, target) {
-            if (!gConfig.active) {
+            var platform = target.platform.toLowerCase();
+            var isNativeMobile = (platform == 'android' || platform == 'ios');
+
+            if (!gConfig.active || !isNativeMobile) {
                 return;
             }
             Editor.log('Import Cocos Creator AdColony Plugin');
