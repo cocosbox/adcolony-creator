@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>AdColony Configure</title>
+
+    <link rel="stylesheet" href="../assets/css/adcolony.css"/>
+
+</head>
+<body>
+
+
+    <div class="row-flex row-margin noshrink">
+        <div class="adcolony-name">AdColony</div>
+        <label class="flex-grow checkbox-label">
+            <input class="checkbox-cb" type="checkbox" id="adcolony-active"/>
+            <div class="checkbox-div"></div>
+        </label>
+        <a class="link-color disable-line" href="http://adcolony.cocos.com/">Go to dashboard</a>
+    </div>
+
+    <div class="row-flex row-margin noshrink" >
+            <div class="config-key-label" >AdColony Plugin Version</div>
+            <span class="flex-grow config-import-version-value" id="import-version"></span>
+            <button id="btn-update" class="button">Save</button>
+    </div>
+
+    <div class="platform-config-area">
+        <div class="config-key-label row-platform-margin platform-name" >Android</div>
+        <hr />
+        <div class="row-flex row-margin">
+            <label class="config-key-label" >AdColony ID</label>
+            <input class="adcolony-config-id adcolony-android-config-id flex-grow" ></input>
+        </div>
+        <div class="row-flex row-margin">
+            <label class="config-key-label" >Debug</label>
+            <input class="adcolony-config-debug" type="checkbox" name="adcolony-android-config-debug"/>
+        </div>
+        <div>
+            <!-- <div class="config-key-label row-margin">Ads</div> -->
+            <div class="row-flex row-margin">
+                <label class="flex-grow config-key-label">Zone Name</label>
+                <label class="flex-grow config-key-label">Zone ID</label>
+            </div>
+            <ul class="adcolony-config-ads">
+                <div class="row-flex row-margin hide">
+                    <input class="adcolony-config-ad-name flex-grow input-margin"></input>
+                    <input class="adcolony-config-ad-zone flex-grow input-margin"></input>
+                    <div class="adcolony-config-ad-del"> X </div>
+                </div>
+            </ul>
+            <button class="button row-margin">Add</button>
+            <label class="remove-hint">Zone Name 或 Zone ID为空, 对应项在保存时会自动移除</label>
+        </div>
+    </div>
+
+
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script>if (window.module) module = window.module;</script>
+    <script type="text/javascript" src="../assets/js/configure.js"></script>
+
+    </body>
+</html>

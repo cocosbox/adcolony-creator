@@ -1,0 +1,13 @@
+{
+    "name": "adcolony",
+    "version": "0.0.15",
+    "beta": false,
+    "description": "AdColony for Creator",
+    "main": "main.js",
+    "author": "sdkbox.com",
+    "main-menu": {
+        "i18n:MAIN_MENU.package.title/AdColony/Configure": {
+            "message": "adcolony:configure"
+        }
+    }
+}
